@@ -7,16 +7,18 @@
   "private": true,
   "dependencies": {
     "@sap/cds": "^6",
+    "@sap/hdbext": "^7.3.1",
     "express": "^4",
     "hdb": "^0.19.0",
-    "@sap/hdbext": "^7.3.1",
     "sap-hdbext-promisfied": "^2.202108.1"
   },
   "devDependencies": {
+    "@sap/ux-specification": "^1.102.14",
     "sqlite3": "^5.0.4"
   },
   "scripts": {
-    "start": "cds run"
+    "start": "cds run",
+    "watch-products_overview": "cds watch --open products_overview/webapp/index.html?sap-ui-xx-viewCache=false"
   },
   "cds": {
     "hana": {
@@ -27,5 +29,8 @@
         "kind": "hana"
       }
     }
-  }
+  },
+  "sapux": [
+    "app/products_overview"
+  ]
 }
